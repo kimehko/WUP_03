@@ -56,6 +56,13 @@ The numerical summary shows that the students who sit in the back drink about te
 model1 <- aov(alcohol~Seat,data=davisdata)
 summary.aov(model1)
 ```
+The P value is 0.000116, which is less than 0.05, so we fail to reject the $H_0$ and conclude that there is a relationship between where someone sits and how much they drink.
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+The tukey graph shows that there is a difference in alcohol consumption between students who sit in the front, middle, and back.There is no difference in alcohol consumption between the front and middle row.  
 
 ## Conclusions
 
