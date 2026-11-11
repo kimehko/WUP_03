@@ -41,9 +41,21 @@ boxplot(alcohol~Seat,data=davisdata)
 
 Graph demonstrates that if the student sits in the back they are more likely to consume more ounces per week of alcohol than the students who sits in the front or middle.  
 
-## Numerical Summarys 
+## Numerical Summaries  
+
+```{r}
+favstats(alcohol~Seat,data=ucdavis1)
+```
+
+The numerical summary shows that the students who sit in the back drink about ten more ounches of alcohol than the students who sit in the middle and front seats. Students who sit in the middle or back drink about 2 to 3 ounches of alcohol per week. 
+
 
 ## Inferential Tests
+
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
 
 ## Conclusions
 
